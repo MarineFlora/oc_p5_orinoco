@@ -1,0 +1,16 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "bootstrap-icons": "^1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./css/style.css --style expanded"
+  },
+  "author": "",
+  "license": "ISC"
+}

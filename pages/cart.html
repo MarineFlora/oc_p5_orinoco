@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Chez Oriphoto, nous vous proposons une selection de caméras vintage qui ravira les passionnés de photographie et amateurs d'objets authentiques!">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <link rel="icon" href="../images/favicon.PNG" />
+        <title>Oriphoto - votre panier</title>
+
+    </head>
+
+    <body onload="loadCart()">
+        <!-- HEADER -->
+        <header>
+            <!-- 1er nav-->
+            <div class="bg-light">
+                <div class="container">
+                    <div class="row">
+                        <nav class="col navbar navbar-expand navbar-light justify-content-between first-nav ">
+                            <a class="navbar-brand" href="../index.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class=" gradient bi bi-camera2" viewBox="0 0 16 16">
+                                    <defs>
+                                        <linearGradient id="gradient" x1="0" x2="1" y1="0" y2="1">
+                                            <stop offset="0%" stop-color="#d58138" />
+                                            <stop offset="100%" stop-color="#8f5bfe" />
+                                        </linearGradient> 
+                                    </defs>
+                                    <path d="M5 8c0-1.657 2.343-3 4-3V4a4 4 0 0 0-4 4z"/>
+                                    <path d="M12.318 3h2.015C15.253 3 16 3.746 16 4.667v6.666c0 .92-.746 1.667-1.667 1.667h-2.015A5.97 5.97 0 0 1 9 14a5.972 5.972 0 0 1-3.318-1H1.667C.747 13 0 12.254 0 11.333V4.667C0 3.747.746 3 1.667 3H2a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1h.682A5.97 5.97 0 0 1 9 2c1.227 0 2.367.368 3.318 1zM2 4.5a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0zM14 8A5 5 0 1 0 4 8a5 5 0 0 0 10 0z"/>
+                                </svg>
+                                Oriphoto
+                            </a>
+
+                            <ul class="navbar-nav d-flex align-items-center">
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="mx-2 bi bi-person navbar-icon" viewBox="0 0 16 16">
+                                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                        </svg>
+                                        <span>Me connecter</span>
+                                    </a>
+                                </li>
+                            
+                                <li class="nav-item fw-bold d-flex align-items-center cart-header">
+                                    <a class="nav-link" href="cart.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="mx-2 bi bi-basket2-fill navbar-icon" viewBox="0 0 16 16">
+                                            <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z"/>
+                                        </svg>
+                                        <span>Mon panier</span>
+                                    </a>
+                                    <div class="cart-header__number d-flex justify-content-center"><!-- totalQuantity--> </div> 
+                                </li>
+                            </ul>
+                            
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- 2eme nav-->
+            <div class="bg-light">
+                <div class="container">
+                    <div class="row">     
+                        <nav class="col navbar navbar-expand-lg navbar-light second-nav">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"> 
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            
+                                <ul id="navbarContent" class="navbar-nav collapse navbar-collapse justify-content-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex flex-md-column px-4 " href="../index.html">Argentiques</a>
+                                    </li>
+                                
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex flex-md-column px-4 " href="#">Objectifs</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex flex-md-column px-4 " href="#">Pellicules</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex flex-md-column px-4 " href="#">Accessoires</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex flex-md-column px-4 " href="#">Promotions</a>
+                                    </li>
+                                </ul>
+                            
+                        </nav>
+                    </div>  
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+        <main>   
+           <div class="container pt-4 pb-5 mb-5">
+                <!-- Timeline-->
+                <ul class="row justify-content-center list-unstyled text-center mb-5">
+                    <li class="col-3 fw-bold bg-primary">1. Panier</li>
+                    <li class="col-4 fw-light bg-light p-0">2. Confirmation</li>
+                </ul>
+
+                 <!-- PANIER VIDE : MESSAGE -->
+                <div id="empty-cart" class="d-flex flex-column align-items-center d-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
+                        <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
+                        <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
+                    </svg>
+                    <h1 class="pt-3 fw-bold">Votre panier est vide</h1>
+                    <a href="../index.html" class="link-dark pt-3">Continuer mes achats</a>
+                </div>
+
+                <!-- PANIER PLEIN : RECAPITULATIF COMMANDE  -->
+                <div id="cart-layout" class="cart-full-display d-none">
+                    <div class="row flex-column">
+                        <!-- lien de retour + titre -->
+                        <div class="col pb-3 ">
+                            <a href="../index.html" class="link-dark text-decoration-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                </svg>
+                                Continuer mes achats
+                            </a> 
+                        </div>
+                        <div id="cart-title" class="pb-3 col"> 
+                            <!-- titre + nombre produits -->
+                        </div>                                                    
+                    </div>
+
+                    <div class="row mx-2">
+                        <div class="col-lg-9 col my-2">
+                            <div class="row p-3 text-center align-items-center cart-subheading">
+                                <p class="col-sm-6 fw-bold mb-2 d-none d-md-block">Modèle</p>
+                                <p class="col-sm-2 fw-bold mb-2 price-product d-none d-md-block">Prix</p>  
+                                <p class="col-md-2 fw-bold mb-2 d-flex justify-content-center align-items-center d-none d-md-block">Quantité</p>                   
+                             </div>
+                             <div id="cart-products" class="row p-3 text-center justify-content-between align-items-center"></div> 
+                             <!-- affichage produits ajoutés au panier -->
+                        </div>
+
+                        <div class="col-lg-3 my-2 ">
+                            <h2 class="row text-left pb-2 ">Récapitulatif</h2>
+                            <div id="cart-total" class="row bg-light p-3 justify-content-center rounded">
+                                <!-- affichage total -->
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <!-- formulaire -->
+                    <div class="row">
+                        <div  class="col d-flex flex-column align-items-center">
+                            <!-- affichage du formulaire de contact pour valider commande-->
+                            <form id="form-contact" class="needs-validation" novalidate>
+                               <h2 class="my-4">Complétez le formulaire ci-dessous pour valider votre commande :</h2>
+                                <div class="row">
+                                    <div class="form-group col-md-6 mb-3">
+                                        <label for="lastName">Nom</label>
+                                        <input type="text" id="lastName" name="lastName" class="form-control" pattern="[A-Za-z][A-Za-z' -]*" required />
+                                    </div>
+
+                                    <div class="form-group col-md-6 mb-3">
+                                        <label for="firstName">Prénom</label>
+                                        <input type="text" id="firstName" name="firstName" class="form-control" pattern="[A-Za-z][A-Za-z' -]*" required />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col mb-3">
+                                        <label for="address">Adresse</label>
+                                        <input type="text" id="address" name="address" class="form-control" minlength="5" required />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col mb-3">
+                                        <label for="adressComplement">Complément d'adresse (facultatif)</label>
+                                        <input type="text" id="addressComplement" name="addressComplement" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-9 mb-3">
+                                        <label for="city">Ville</label>
+                                        <input type="text" id="city" name="city" class="form-control" pattern="[A-Za-z' -]+" required />
+                                    </div>
+                                
+                                    <div class="form-group col-md-3 mb-3">
+                                        <label for="zipCode">Code Postal</label>
+                                        <input type="text" id="zipCode" name="zipCode" pattern="[0-9]{5}" class="form-control" required />
+                                        <div class="invalid-feedback">doit contenir 5 chiffres</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col mb-3">
+                                        <label for="email">Email</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            </div>  
+                                            <input type="email" id="email" name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+                                            <div class="invalid-feedback">Veuillez saisir une adresse email valide</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button type="submit" id="cart-valid" class="btn btn-primary fw-bold my-4 w-auto ">Valider mon panier</button>
+                                    </div>
+                                </div> 
+                            </form>
+                        </div>
+                    </div>           
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER --> 
+        <footer>
+            <div class="second-footer-area py-3 mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <ul class="list-inline text-center">
+                                <li class="list-inline-item footer-heading--brand fw-light"><a href="#" class="nav-link">Orinoco</a></li>
+                                <li class="list-inline-item fw-light">&middot;</li>
+                                <li class="list-inline-item fw-light"><a href="#" class="nav-link">Commande</a></li>
+                                <li class="list-inline-item fw-light">&middot;</li>
+                                <li class="list-inline-item fw-light"><a href="#" class="nav-link">Informations légales</a></li>
+                              </ul>  
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </footer>
+        
+    <!-- Fichiers JavaScript locaux -->
+        <script src="../js/model/contact.js"></script>
+        <script src="../js/model/order.js"></script>
+        <script src="../js/cart.js" ></script>
+        <script src="../js/template.js"></script>
+        <script src="../js/headerCartNumber.js"></script>
+        
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    </body>
+
+</html>
+

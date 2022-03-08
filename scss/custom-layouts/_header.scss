@@ -1,0 +1,45 @@
+// style HEADER
+
+.first-nav {
+    .gradient {
+        fill: url(#gradient);
+    }
+    .navbar-brand {
+        font-family: "belligerent_madnessregular", "Calibri", Helvetica, sans-serif;
+    } 
+    .navbar-icon {
+        color: $primary;
+    }
+    .nav-link  {
+        &:hover > .navbar-icon {
+            color: rgba($primary, .6);
+            transition : $nav-link-transition;
+        }
+    }
+}
+
+.second-nav {
+    padding: 0;
+    .nav-item {
+        &:hover {
+            .nav-link {
+                color:$secondary;
+                border-bottom: $secondary solid 3px;
+                transition : all .15s ease;
+            }     
+        }   
+        .nav-link {
+            height: 2.7rem;
+        } 
+    } 
+    .active .nav-link {
+        color:$secondary;
+        border-bottom: $secondary solid 3px;  
+    }
+}
+
+@include media-breakpoint-down(md) { 
+    header span {
+        display: none;
+    }
+}

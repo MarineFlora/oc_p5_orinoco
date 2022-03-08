@@ -1,0 +1,33 @@
+// style MAIN page index.html
+
+.heading {
+  line-height: 2;
+}
+
+.subheading {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        height: 2px;
+        width: 10%;
+        background-color: $primary;
+    }
+}
+
+.card-img-top {
+    height: 40vh;
+    object-fit: cover;
+}
+
+.price {
+    font-size: $h2-font-size;
+}
+
+.btn {
+    border: solid 2px $primary;
+    background-color: transparent;
+}
+

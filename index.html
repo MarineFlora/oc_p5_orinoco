@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Chez Oriphoto, nous vous proposons une selection de caméras vintage qui ravira les passionnés de photographie et amateurs d'objets authentiques!">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+
+        <link rel="icon" href="images/favicon.PNG" />
+        <title>Oriphoto - caméras vintage authentiques</title>
+
+    </head>
+
+    <body onload="loadCameras() & updateHeaderCart()">
+        <!-- HEADER -->
+        <header>
+            <!-- 1er nav-->
+            <div class="bg-light">
+                <div class="container">
+                    <div class="row">
+                        <nav class="col navbar navbar-expand navbar-light justify-content-between first-nav ">
+                            <a class="navbar-brand" href="index.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class=" gradient bi bi-camera2" viewBox="0 0 16 16">
+                                    <defs>
+                                        <linearGradient id="gradient" x1="0" x2="1" y1="0" y2="1">
+                                            <stop offset="0%" stop-color="#d58138" />
+                                            <stop offset="100%" stop-color="#8f5bfe" />
+                                        </linearGradient> 
+                                    </defs>
+                                    <path d="M5 8c0-1.657 2.343-3 4-3V4a4 4 0 0 0-4 4z"/>
+                                    <path d="M12.318 3h2.015C15.253 3 16 3.746 16 4.667v6.666c0 .92-.746 1.667-1.667 1.667h-2.015A5.97 5.97 0 0 1 9 14a5.972 5.972 0 0 1-3.318-1H1.667C.747 13 0 12.254 0 11.333V4.667C0 3.747.746 3 1.667 3H2a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1h.682A5.97 5.97 0 0 1 9 2c1.227 0 2.367.368 3.318 1zM2 4.5a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0zM14 8A5 5 0 1 0 4 8a5 5 0 0 0 10 0z"/>
+                                </svg>
+                                Oriphoto
+                            </a>
+
+                            <ul class="navbar-nav d-flex align-items-center">
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="mx-2 bi bi-person navbar-icon" viewBox="0 0 16 16">
+                                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                        </svg>
+                                        <span>Me connecter</span>
+                                    </a>
+                                </li>
+                            
+                                <li class="nav-item d-flex align-items-center cart-header">
+                                    <a class="nav-link" href="pages/cart.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="mx-2 bi bi-basket2-fill navbar-icon" viewBox="0 0 16 16">
+                                            <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z"/>
+                                        </svg>
+                                        <span>Mon panier</span>
+                                    </a>
+                                    <div class="cart-header__number d-flex justify-content-center"><!-- totalQuantity--> </div> 
+                                </li>
+                            </ul>
+                            
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- 2eme nav-->
+            <div class="bg-light">
+                <div class="container">
+                    <div class="row">     
+                        <nav class="col navbar navbar-expand-lg navbar-light second-nav">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"> 
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            
+                                <ul id="navbarContent" class="navbar-nav collapse navbar-collapse justify-content-center">
+                                    <li class="nav-item active">
+                                        <a class="nav-link d-flex flex-md-column px-4 " href="index.html">Argentiques</a>
+                                    </li>
+                                
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex flex-md-column px-4 " href="#">Objectifs</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex flex-md-column px-4 " href="#">Pellicules</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex flex-md-column px-4 " href="#">Accessoires</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex flex-md-column px-4 " href="#">Promotions</a>
+                                    </li>
+                                </ul>
+                            
+                        </nav>
+                    </div>  
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+        <main >
+            <!-- MAIN HEADING --> 
+            <div class="container pt-5 heading">
+                <div class="row ">
+                    <div class="col text-center">
+                        <h1 class="fw-bold">BIENVENUE DANS LA BOUTIQUE DES PASSIONNÉ·E·S DE PHOTOGRAPHIE</h1>
+                        <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id semper nunc, at luctus felis. Aenean facilisis nisi eu leo lobortis hendrerit. Donec eget imperdiet diam. Pellentesque velit nibh, tristique ut posuere sit amet, efficitur condimentum orci. </p>
+                    </div>
+                </div>
+            </div>
+           
+           <div class="container py-4">
+            <!-- MAIN SUBHEADING --> 
+                <div class="row mb-3 mb-lg-4 ">
+                    <div class="col">
+                        <h2 class="subheading">Notre sélection de caméras vintage</h2> 
+                    </div>
+                </div>
+            
+
+            <!-- MAIN CARDS --> 
+                <div id="cards" class="row justify-content-center">
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER --> 
+        <footer>
+            <!-- FOOTER LIENS RESEAUX SOCIAUX --> 
+            <div class="first-footer-area pt-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h3 class="text-center ">Oriphoto est une marque Orinoco</h3>
+                            <h4 class="fw-light">Restons en contact</h4>
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">
+                                    <a class="nav-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li  class="list-inline-item">
+                                    <a class="nav-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li  class="list-inline-item">
+                                    <a class="nav-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li  class="list-inline-item">
+                                    <a class="nav-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER LIENS INFOS SITE --> 
+            <div class="second-footer-area py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <h4 class="footer-heading--brand">Orinoco</h4>
+                            <ul class="list-unstyled fw-light">
+                                <li><a class="nav-link" href="#">Qui sommes nous</a></li>
+                                <li><a class="nav-link" href="#">Nos engagements</a></li>
+                                <li><a class="nav-link" href="#">Nos marques Orinoco</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <h4 class="footer-heading">Commande</h4>
+                            <ul class="list-unstyled fw-light">
+                                <li><a class="nav-link" href="#">Questions fréquentes</a></li>
+                                <li><a class="nav-link" href="#">Suivre une commande</a></li>
+                                <li><a class="nav-link" href="#">Conditions de livraison</a></li>
+                                <li><a class="nav-link" href="#">Paiement</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <h4 class="footer-heading">Informations légales</h4>
+                            <ul class="list-unstyled fw-light">
+                                <li><a class="nav-link" href="#">Conditions de vente</a></li>
+                                <li><a class="nav-link" href="#">Mentions légales</a></li>
+                                <li><a class="nav-link" href="#">Données personnelles</a></li>
+                                <li><a class="nav-link" href="#">Utilisation des cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+
+        </footer>
+        
+    <!-- Fichiers JavaScript locaux -->
+        <script src="js/model/camera.js"></script>
+        <script src="js/loadCameras.js"></script>
+        <script src="js/template.js"></script>
+        <script src="js/headerCartNumber.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    </body>
+
+</html>
+

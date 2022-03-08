@@ -1,0 +1,23 @@
+$font-family-sans-serif: "Calibri", Helvetica, sans-serif;
+$headings-font-family: "Calibri", Helvetica, sans-serif;
+
+$black: #000;
+$light: #F6F2ED;
+$primary: #C07635;
+$secondary: #936136;
+$tertiary: #EBA669;
+$dark: $secondary;
+
+$navbar-brand-font-size: 2.5rem;
+$navbar-light-color: rgba($black, .85);
+$navbar-light-hover-color: rgba($black, .6); 
+$navbar-dark-color: $light;
+$navbar-dark-hover-color: $light; 
+$nav-link-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+$font-size-base: 1.1rem;
+$h1-font-size:  $font-size-base * 1.7;
+$h2-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 1.4;
+$h4-font-size: $font-size-base * 1.2;
+
