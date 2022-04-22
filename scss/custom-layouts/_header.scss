@@ -10,8 +10,11 @@
     .navbar-icon {
         color: $primary;
     }
+    .nav-item .disabled .navbar-icon  {
+        color: rgba($primary, .6);
+    }
     .nav-link  {
-        &:hover > .navbar-icon {
+        &:hover > .navbar-icon, .nav-item .disabled .navbar-icon {
             color: rgba($primary, .6);
             transition : $nav-link-transition;
         }
@@ -20,7 +23,7 @@
 
 .second-nav {
     padding: 0;
-    .nav-item {
+    .nav-item  {    
         &:hover {
             .nav-link {
                 color:$secondary;
@@ -36,6 +39,7 @@
         color:$secondary;
         border-bottom: $secondary solid 3px;  
     }
+   
 }
 
 @include media-breakpoint-down(md) { 

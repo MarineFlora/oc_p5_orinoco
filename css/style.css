@@ -9736,6 +9736,19 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
 @font-face {
   font-family: "belligerent_madnessregular";
   src: url("../font/belligerent-webfont.eot");
@@ -9752,7 +9765,10 @@ textarea.form-control-lg {
 .first-nav .navbar-icon {
   color: #C07635;
 }
-.first-nav .nav-link:hover > .navbar-icon {
+.first-nav .nav-item .disabled .navbar-icon {
+  color: rgba(192, 118, 53, 0.6);
+}
+.first-nav .nav-link:hover > .navbar-icon, .first-nav .nav-link .nav-item .disabled .navbar-icon {
   color: rgba(192, 118, 53, 0.6);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }

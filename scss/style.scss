@@ -31,7 +31,8 @@
 //import Bootstrap end
 
 // fichiers customisation layout
-@import "./custom-layouts/typography";
+@import "./base/base";
+@import "./base/typography";
 @import "./custom-layouts/header";
 @import "./custom-layouts/footer";
 // fichiers customisation pages
