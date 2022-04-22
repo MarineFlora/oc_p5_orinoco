@@ -1,4 +1,17 @@
 @charset "UTF-8";
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -9736,19 +9749,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex-grow: 1;
-}
-
 @font-face {
   font-family: "belligerent_madnessregular";
   src: url("../font/belligerent-webfont.eot");

@@ -1,5 +1,6 @@
 //
 @import "./variables_overrides";
+@import "./base/base";
 
 //import Bootstrap start
 // Configuration
@@ -31,7 +32,6 @@
 //import Bootstrap end
 
 // fichiers customisation layout
-@import "./base/base";
 @import "./base/typography";
 @import "./custom-layouts/header";
 @import "./custom-layouts/footer";
